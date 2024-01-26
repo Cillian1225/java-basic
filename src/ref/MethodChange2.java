@@ -1,14 +1,17 @@
 package ref;
 
-public class MethodChange1 {
+public class MethodChange2 {
     public static void main(String[] args) {
-        int a = 10;
-        System.out.println("메서드 호출전 : a = "+ a);
-        changePrimitive(a);
-        System.out.println("메서드 호출후 : a = "+ a);
+        Data dataA = new Data();
+        dataA.value = 10;
+
+        System.out.println("메서드 호출전 : a = " + dataA.value);
+        changePrimitive(dataA);
+        System.out.println("메서드 호출후 : a = " + dataA.value);
     }
 
-     static void changePrimitive(int x){
-        x = 20;
-     }
+    static void changePrimitive(Data dataX) {
+        System.out.println("dataX=" + dataX);
+        dataX.value = 20;
+    }
 }
